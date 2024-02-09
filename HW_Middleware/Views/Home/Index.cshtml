@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model string[]
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Logs Page</title>
+</head>
+<body>
+    <h1>Logs</h1>
+    @if (Model != null && Model.Length > 0)
+    {
+        <ul>
+            @foreach (var log in Model)
+            {
+                <li>@log</li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p>No logs available.</p>
+    }
+</body>
+</html>
